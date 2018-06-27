@@ -6,7 +6,7 @@ function makeGrid() {
    
 
 // Your code goes here!
-
+var rows = $('')
 
 }
 // Select color input
