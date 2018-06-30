@@ -3,22 +3,22 @@
 function makeGrid(rows, columns) {
 // Your code goes here!
 for(let i=1; i<=rows; i++){
-    //selects the table and appends table rows depending on the user input
+//selects the table and appends table rows depending on the user input
     var tab = $('table');
     tab.append('<tr></tr>');
 }
-//selects the tag table row<tr> to append the column 
+//selects the tag table row<tr> to append the column<td>
     for(let i=1; i<=columns; i++){ 
         $('tr').append('<td></td>');
     }
 }
-// Select size input
+
 // When the height and width size is submitted by the user, calls makeGrid()
 $('form').submit(function(event){
     let rows = $('input#inputHeight').val();
     let columns = $('input#inputWidth').val();
 
-    // clears the DOM to append the next <tr><td>
+// clears the DOM to append the next <tr><td>
     $('tr').remove();
     //calls the makeGrid() function
     makeGrid(rows, columns);
@@ -26,7 +26,6 @@ $('form').submit(function(event){
 });
 
 //Get the color value as the user input changes
-// Select color input as the
 $('#colorPicker').change(function(event){
     let gridColor = $(this).val();
     $('td').click(function(event){
@@ -35,3 +34,4 @@ $('#colorPicker').change(function(event){
         
     event.preventDefault();
 });
+
